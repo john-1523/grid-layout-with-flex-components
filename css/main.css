@@ -1,27 +1,48 @@
+/* Write the rest of the CSS to match your final HTML/CSS page with the image provided.
+- Use the grid properties to layout the emoji cards.
+- Use the flexbox properties to layout the content of the emoji cards.
+- Display the emoji card content in proper order as per the image.
+- The buttons in each card should be aligned with the bottom of the card using a flexbox property.
+- Setup GitHub pages site for your repository.
+- Test the GitHub pages URL and submit it for assessment. */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
-  }
+}
   
-  .emoji {
+.emojis {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.emoji {
     border: 1px solid #222;
     border-radius: 8px;
     padding: 1rem;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* moves button to bottom */
+}
   
-  .emoji h2 {
+.emoji h2 {
     margin: 0;
     border-bottom: 2px solid #ccc;
-  }
+}
   
-  .emoji a {
+.emoji a {
     text-decoration: none;
     background-color: #781BAA;
     color: white;
     padding: 1rem;
     border-radius: 8px;
-  }
+}
   
-  .icon {
+.icon {
     font-size: 4rem;
-  }
+    display: flex;
+    justify-content: center; /* centers emoji */
+    order: -1; /* moves emoji to top */
+}
